@@ -1,17 +1,16 @@
-<script type='text/javascript'>
-  // 5 different links
-  var links = [
-    'https://cutl.io/link1-22-07-25',
-    'https://cutl.io/link2-22-07-25',
-    'https://cutl.io/link3-22-07-25',
-    'https://cutl.io/link4-22-07-25',
-    'https://cutl.io/link5-22-07-25'
+(function() {
+  // 🔹 Random redirect links with target (_self = current tab, _blank = new tab)
+  const links = [
+    { url: "https://cutl.io/link20-21-10-25", target: "_self" },
+    { url: "https://cutl.io/link05-21-10-25", target: "_blank" },
+    { url: "https://cutl.io/linkb8-21-10-25", target: "_self" },
+    { url: "https://cutl.io/link28-25-10-25", target: "_blank" },
+    { url: "https://cutl.io/link28-21-10-25", target: "_self" }
   ];
 
-  // Pick a random link
-  var randomIndex = Math.floor(Math.random() * links.length);
-  var selectedLink = links[randomIndex];
+  // 🔹 Pick a random link
+  const selected = links[Math.floor(Math.random() * links.length)];
 
-  // Redirect to that link
-  window.location.href = selectedLink;
-</script>
+  // 🔹 Redirect based on target
+  window.open(selected.url, selected.target);
+})();
